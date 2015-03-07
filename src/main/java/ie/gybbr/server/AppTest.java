@@ -16,6 +16,8 @@
 
 package ie.gybbr.server;
 
+import ie.gybbr.server.http.HttpConnection;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -35,6 +37,7 @@ public class AppTest {
 	 */
 	public static void main(String[] args) {
 		new AppTest().doApp();
+		
 	}
 
 	/**
@@ -112,7 +115,15 @@ public class AppTest {
 				if (count >= 4) {
 					new ResetCountThread(deviceid, 0).start();
 				}
+				try {
+					new HttpConnection().sendPost();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
+			
+			
 		}
 	}
 
