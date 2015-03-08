@@ -1,0 +1,125 @@
+* {
+    font-family:'Open Sans', sans-serif;
+}
+h1, h3, h2 {
+    font-weight:300;
+}
+label {
+    margin-top:5px;
+    display:block;
+}
+input[type=submit] {
+    text-transform:uppercase;
+    border:2px solid rgba(0,0,0,0.7);
+    color:rgba(0,0,0,0.7);
+    background:transparent;
+    border-radius:3px;
+    margin:3px;
+    transition:all 0.2s;
+    -webkit-transition:all 0.2s;
+    -moz-transition:all 0.2s;
+}
+input[type=submit]:hover {
+    color:white;
+    background:rgba(0,0,0,0.7);
+    border-color:transparent;
+}
+input[type=text], input[type=tel], input[type=email] {
+    width:250px;
+    border:1px solid rgba(0,0,0,0.3);
+    border-bottom:2px solid rgba(0,0,0,0.3);
+    padding:5px;
+    margin:3px;
+}
+input:focus {
+    outline:0;
+    border-color:rgba(0,0,0,0.5);
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+header h1 {
+    text-align:center;
+    font-size:45px;
+}
+header img {
+    position:absolute;
+    margin-top:-20px;
+}
+@media (max-width:855px) {
+    header img {
+        display:none;
+    }
+}
+@media (max-width: 768px) {
+    .home-forms {
+        max-width:300px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
+    opacity:0.2;
+}
+footer {
+    margin-top:30px;
+    text-align:center;
+    margin-bottom:28px;
+}
+footer span {
+    color:rgba(0,0,0,0.6);
+    cursor:default;
+    transition:all 0.2s;
+    -webkit-transition:all 0.2s;
+    -moz-transition:all 0.2s;
+}
+
+footer span:hover {
+    margin-left:15px;
+    color:rgba(0,0,0,0.8);
+}
+.success-msg {
+    text-align:center;
+    color:white;
+    padding:7px;
+    background:#25CF4B;
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    cursor:default;
+}
+#map-canvas {
+    height:400px;
+}
+#reported-bikes {
+    
+}
+#map-canvas {
+    margin-top:0px;
+    border-top:2px solid rgba(0,0,0,0.5);
+    border-bottom:2px solid rgba(0,0,0,0.5);
+}
+#map-title {
+    margin:0;padding:0;
+    margin-top:20px;
+    margin-left:20px;
+}
