@@ -1,0 +1,7 @@
+/bin/
+/target/
+.settings
+.lck
+.classpath
+.project
+.c9
