@@ -9,19 +9,29 @@ $reported_bikes = $db->select('registered_bikes', 'bike_status = 1');
     
     <div id="reported-bikes" class="col-1-3">
         <h2>Reported bikes</h2>
+        <label>Select bike:</label>
         <select id="reported-selection">
             <?php 
             foreach($reported_bikes as $bike) { 
                 $data = null;
+                $snaps = null;
                 $logs = $db->select('logs', 'chip_number = ' . $bike['chip_number'] . ' AND timestamp >= ' . $bike['stolen_date']);
-                if (is_array($logs)) foreach($logs as $log) $data .= $log['sensor_id'] . '|';
+                if (is_array($logs)) foreach($logs as $log) {
+                    $data .= $log['sensor_id'] . '|';
+                    if (isset($log['cctv_snap']))
+                    $snaps .= $log['cctv_snap'] . '-' . date('d/m/Y', $log['timestamp']) . '|';
+                }
+                $data = substr($data, 0, strlen($data) - 1);
+                $snaps = substr($snaps, 0, strlen($snaps) - 1);
             ?>
             
-            <option value="<?=$data?>"><?=$bike['full_name']?></option>
+            <option data-snaps="<?=$snaps?>" value="<?=$data?>"><?=$bike['full_name']?></option>
             <?php } ?>
         </select>
         <br><br>
         <button id="show_spotted">View spotted locations</button>
+        <br><br>
+        <button id="show_snaps">View CCTV snaps</button>
         <button>Contact owner</button>
     </div>
     
@@ -80,10 +90,9 @@ $reported_bikes = $db->select('registered_bikes', 'bike_status = 1');
             icon:'/img/green-marker.png'
         });
         <?php } ?>
-         
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
 <h3 id="map-title">- Station View -</h3>
-<div id="map-canvas"></div>
+<div id="map-canvas"></div

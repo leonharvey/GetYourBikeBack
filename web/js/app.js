@@ -8,3 +8,16 @@ $('#show_spotted').click(function() {
         });
     });
 });
+
+$('#show_snaps').click(function() {
+    var snaps = $('#reported-selection').find(':selected').attr('data-snaps').split('|');
+    $.each(snaps, function(i, v) {
+        var snap = v.split('-');
+        console.log(v);
+        if (v) $('.modal .inner').append('<a href="' + '/snaps/' + snap[0] + '.jpg" target="_blank">View snap - ' + snap[1] + '</a><br>');
+    });
+    $('.modal').fadeIn('fast');
+})
+$('.close-btn').click(function() {
+    $('.modal').fadeOut('fast');
+})

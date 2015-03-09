@@ -37,7 +37,7 @@
     <h1>Report stolen bike</h1>
     <form action="/" method="POST">
         <input type="text" name="chip_number" placeholder="Enter chip number">
-        <label>Let us post details to twitter</label>
+        <label class="checkbox">Auto-share to GYBB twitter</label>
         <input type="checkbox" name="twitter_share" value="true">
         <input type="hidden" name="request_type" value="report_stolen">
         <input type="hidden" name="token" value="<?=$this->token?>">

@@ -80,6 +80,9 @@ hr {
     background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
     opacity:0.2;
 }
+label.checkbox {
+    display:inline-block;
+}
 footer {
     margin-top:30px;
     text-align:center;
@@ -122,4 +125,33 @@ footer span:hover {
     margin:0;padding:0;
     margin-top:20px;
     margin-left:20px;
+}
+.modal {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.9);
+    display:none;
+}
+.modal .inner {
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    background:rgba(255,255,255,0.5);
+    text-align:center;
+    margin-top:100px;
+}
+.modal .inner a {
+    text-decoration:none;
+    margin-top:5px;
+}
+.close-btn {
+    cursor:pointer;
+    margin-bottom:5px;
+}
+.modal .inner a {
+    width:100%;
+    
 }

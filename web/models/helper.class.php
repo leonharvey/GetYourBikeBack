@@ -26,6 +26,6 @@ class helper {
     }
     
     public static function sendSMS($number, $message) {
-        file_get_contents('https://rest.nexmo.com/sms/json?api_key=rwhwrhwr&api_secret=wrhwrhwr&from=GYBBR&to=353' . $number . '&text=' . urlencode($message));
+        file_get_contents('https://rest.nexmo.com/sms/json?api_key=aaa5c631&api_secret=5b4f2d3e&from=GYBBR&to=353' . $number . '&text=' . urlencode($message));
     }
 }

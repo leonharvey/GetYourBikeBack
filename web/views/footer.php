@@ -4,6 +4,7 @@
                 </footer>
             </div>
         </div>
+        <div class="modal"><div class="inner"><div class="close-btn">Close</div></div></div>
         <script src="/js/jquery.js"></script>
         <script src="/js/app.js"></script>
     </body>
